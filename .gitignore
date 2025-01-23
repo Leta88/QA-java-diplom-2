@@ -1,0 +1,9 @@
+
+/.idea
+/target/test-classes
+/target/classes
+/target/surefire-reports
+target/QA-java-diplom2-1.0-SNAPSHOT.jar
+/target/maven-status
+/target/maven-archiver
+/allure-results
