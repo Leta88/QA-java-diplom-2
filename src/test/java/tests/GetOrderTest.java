@@ -1,5 +1,6 @@
 package tests;
 
+import api.IngredientsApi;
 import api.OrderApi;
 import api.UserApi;
 import io.qameta.allure.junit4.DisplayName;
@@ -31,7 +32,7 @@ public class GetOrderTest {
 
     @DisplayName("Check getting list of orders for selected user")
     @Test
-    public void GetOrderListTest(){
+    public void getOrderListTest(){
         UserApi userApi = new UserApi();
         UserData userData = new UserData("Login" + RandomStringUtils.randomAlphabetic(4),
                 RandomStringUtils.randomAlphabetic(4),
@@ -54,7 +55,7 @@ public class GetOrderTest {
 
         OrderApi orderApi = new OrderApi();
 
-        String[] ingredients = {"61c0c5a71d1f82001bdaaa6d", "61c0c5a71d1f82001bdaaa6f"};
+        String[] ingredients = IngredientsApi.getIngredients(2);
         OrderData orderData = new OrderData(ingredients);
 
         response = orderApi.createOrder(orderData, accessToken);

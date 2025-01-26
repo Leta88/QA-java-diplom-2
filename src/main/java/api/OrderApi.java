@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class OrderApi extends RestApi{
 
-    public static final String ACT_ORDER_URI = "/api/orders";
+    private static final String ACT_ORDER_URI = "/api/orders";
 
     @Step("Create order without authorization")
     public ValidatableResponse createOrderNoAuthorize(OrderData order){

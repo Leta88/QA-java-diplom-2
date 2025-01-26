@@ -40,7 +40,7 @@ public class LoginTest {
                 .body("success", is(true));
     }
 
-    @DisplayName("Check user which doen't exist can not log in")
+    @DisplayName("Check user which doesn't exist can not log in")
     @Test
     public void userNotExistsLoginTest(){
         UserApi userApi = new UserApi();
