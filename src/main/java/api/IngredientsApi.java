@@ -1,12 +1,8 @@
 package api;
 
 import io.restassured.response.ValidatableResponse;
-import org.apache.http.HttpStatus;
-
 import java.util.List;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
 
 public class IngredientsApi extends RestApi{
 
